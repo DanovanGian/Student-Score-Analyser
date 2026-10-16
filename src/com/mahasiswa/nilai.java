@@ -1,20 +1,30 @@
+package src.com.mahasiswa;
+
 import java.util.Scanner;
 
-class Mahasiswa {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+public class nilai {
+    Scanner input = new Scanner(System.in);
 
-        int n;
-        System.out.print("jumlah komponen : ");
-        n = input.nextInt();
-        input.nextLine();
+    private int n;
+    private String[] komponen;
+    private double[] nilai;
+    private double[] bobot;
+    private double[] tampung;
+    private double hasil = 0;
 
-        String[] komponen = new String[n];
-        double[] nilai = new double[n];
-        double[] bobot = new double[n];
-        double[] tampung = new double[n];
-        double hasil = 0;
+    public nilai(int n){
+        this.n = n;
+        this.komponen = new String[n];
+        this.nilai = new double[n];
+        this.bobot = new double[n];
+        this.tampung = new double[n];
+        this.hasil = hasil;
+    }
 
+    //getter
+    public double getHasil(){return hasil;}
+
+    void prosesNilai(){
         for (int a = 0; a < n; a++) {
 
             System.out.print("nama komponen : ");
